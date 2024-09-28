@@ -1,6 +1,7 @@
 {
 	"name": "parallel-mws",
 	"type": "module",
+	"license": "UNLICENSED",
 	"scripts": {
 		"demo": "tsx --watch ./test/server.ts",
 		"test": "vitest run --passWithNoTests",
