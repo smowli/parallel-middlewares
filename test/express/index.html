@@ -1,0 +1,22 @@
+<script>
+	window.addEventListener('DOMContentLoaded', async () => {
+		const serialElement = document.querySelector('#serial');
+		const parallelElement = document.querySelector('#parallel');
+
+		fetch('/serial').then(async r => (serialElement.innerHTML = await r.text()));
+		fetch('/parallel').then(async r => (parallelElement.innerHTML = await r.text()));
+	});
+</script>
+
+<body>
+	<div>
+		<p>
+			<span>Serial middlewares: </span>
+			<span id="serial">Waiting for server response ...</span>
+		</p>
+		<p>
+			<span>Parallel middlewares: </span>
+			<span id="parallel">Waiting for server response ...</span>
+		</p>
+	</div>
+</body>

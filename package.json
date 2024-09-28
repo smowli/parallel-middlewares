@@ -1,0 +1,29 @@
+{
+	"name": "parallel-mws",
+	"type": "module",
+	"scripts": {
+		"demo": "tsx --watch ./test/server.ts",
+		"test": "vitest run --passWithNoTests",
+		"test:example": "vitest run test/integration/example.spec.ts",
+		"test:all": "vitest run --coverage --passWithNoTests",
+		"typecheck": "tsc --project tsconfig.json --noEmit",
+		"qa": "npm run typecheck && npm run test:all",
+		"format:fix": "prettier --write --cache --ignore-unknown",
+		"postinstall": "husky"
+	},
+	"devDependencies": {
+		"@types/cookie": "^0.6.0",
+		"@types/express": "^5.0.0",
+		"@types/set-cookie-parser": "^2.4.10",
+		"@vitest/coverage-v8": "^2.1.1",
+		"husky": "^9.1.6",
+		"prettier": "^3.3.3",
+		"tsx": "^4.19.1",
+		"vitest": "^2.1.1"
+	},
+	"dependencies": {
+		"cookie": "^0.6.0",
+		"express": "^4.21.0",
+		"set-cookie-parser": "^2.7.0"
+	}
+}
