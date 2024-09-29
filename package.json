@@ -11,7 +11,7 @@
 		"typecheck": "tsc --project tsconfig.json --noEmit",
 		"qa": "npm run typecheck && npm run test:all",
 		"format:fix": "prettier --write --cache --ignore-unknown",
-		"postinstall": "husky"
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@types/cookie": "^0.6.0",
